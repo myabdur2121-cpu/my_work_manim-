@@ -92,12 +92,12 @@ class ManimAdaptor:
         return displacement
     
     @staticmethod
-    def get_proputional_value(self, line1: Mobject , line2: Mobject , proportion_to: Mobject) -> float:
+    def get_proputional_value(line1: Mobject , line2: Mobject , proportion_to: Mobject) -> float:
         line1 = ManimAdaptor.convert_line_3d_to_2d(line1)
         line2 = ManimAdaptor.convert_line_3d_to_2d(line2)
         proportion_to = ManimAdaptor.convert_line_3d_to_2d(proportion_to)
         return Operation.get_proputional_value(line1,line2,proportion_to)
-
+    @staticmethod
     def get_point_by_proportion(self, line: Mobject, proportional_t: float) -> Point3D:
         line = ManimAdaptor.convert_line_3d_to_2d(line)
         point = Operation.get_point_by_proportion(line,proportional_t)
