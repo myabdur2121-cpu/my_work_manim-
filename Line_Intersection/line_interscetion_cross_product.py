@@ -95,10 +95,10 @@ class ManimAdaptor:
         displacement = ManimAdaptor.convert_point_2d_to_3d(displacement)
         return displacement
     @staticmethod
-    def displacement2D(line1: Mobject, line2: Mobject) -> Line2D:
-        line1 = ManimAdaptor.convert_line_3d_to_2d(line1)
-        line2 = ManimAdaptor.convert_line_3d_to_2d(line2)
-        displacement = Operation.displacement(line1,line2)
+    def displacement2D(point1: Mobject, point2: Mobject) -> Line2D:
+        point1 = ManimAdaptor.convert_point_3d_to_2d(point1)
+        point2 = ManimAdaptor.convert_point_3d_to_2d(point2)
+        displacement = Operation.displacement(point1,point2)
         return displacement
 
     @staticmethod
