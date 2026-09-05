@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-work-manim"
+version = "0.1.0"
+description = "Personal manim toolkit (needle project lib + helpers)"
+requires-python = ">=3.10"
+dependencies = ["manim"]
+
+# root-এর single-file library গুলো
+[tool.setuptools]
+py-modules = ["my_manimlib"]
+
+# subfolder-এর package গুলো
+[tool.setuptools.packages.find]
+include = ["instant_project_module*"]
